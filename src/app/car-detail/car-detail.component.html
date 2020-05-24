@@ -1,0 +1,26 @@
+<div *ngIf="loading" class="fa-4x text-center">
+    <i class="fas fa-spinner fa-spin"></i>
+</div>
+<div *ngIf="!loading">
+    <div *ngIf="error">
+        {{error}}
+    </div>
+    <div *ngIf="!error">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{car.make}} {{car.model}} {{car.year}}</h5>
+                        <h4>
+                            <strong>{{car.price}}</strong>
+                        </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+                            suscipit officia reprehenderit consequatur fuga cum iste. Mollitia distinctio facilis nobis
+                            obcaecati commodi totam cum repudiandae perferendis ducimus? Fugit, dolor nihil.</p>
+                        <button class="btn btn-primary">Show More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
